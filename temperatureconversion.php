@@ -61,7 +61,7 @@ function k2c($givenValue)
 		</tr>
 		<tr>
 			<td>
-				<input type="text" name="given_value">
+				<input type="text" name="givenValue">
 			</td>
 		</tr>
 		<tr>
@@ -81,61 +81,68 @@ function k2c($givenValue)
 		<tr>
 			<td>
 <?php
-if(isset($_POST['button']))
-{
+if(isset($_POST['button'])) {
     
-    $firstTempType=$_POST['firstTempType'];
-    $secondTempType=$_POST['secondTempType'];
-    $givenValue=$_POST['given_value'];
+
+          
+        $firstTempType=$_POST['firstTempType'];
+        $secondTempType=$_POST['secondTempType'];
+        $givenValue=$_POST['givenValue'];
     
-    //Fahrenheit to celsius and kelvin
-    if ($firstTempType=='fahrenheit') 
-    {
-        if ($secondTempType=='celsius') 
+        //error checking if NaN or NULL
+    if (is_numeric($givenValue)) {
+    
+        //Fahrenheit to celsius and kelvin
+        if ($firstTempType=='fahrenheit') 
         {
-            $celsius=f2c($givenValue);
-            echo "$givenValue Fahrenheit = $celsius Celsius";
-        }  elseif ($secondTempType=='kelvin') 
+            if ($secondTempType=='celsius') 
+            {
+                $celsius=f2c($givenValue);
+                echo "$givenValue Fahrenheit = $celsius Celsius";
+            }  elseif ($secondTempType=='kelvin') 
+            {
+                $kelvin=f2k($givenValue);
+                echo "$givenValue Fahrenheit = $kelvin Kelvin";
+            }  else 
+            {
+                echo "$givenValue Fahrenheit";
+            }
+        }
+        //Celsius to fahrenheit and kelvin
+        if ($firstTempType=='celsius') 
         {
-            $kelvin=f2k($givenValue);
-            echo "$givenValue Fahrenheit = $kelvin Kelvin";
-        }  else 
+            if ($secondTempType=='fahrenheit') 
+            {
+                $fahrenheit=c2f($givenValue);
+                echo "$givenValue Celsius = $fahrenheit Fahrenheit";
+            }  elseif ($secondTempType=='kelvin') 
+            {
+                $kelvin=c2k($givenValue);
+                echo "$givenValue Celsius = $kelvin Kelvin";
+            }  else 
+            {
+                echo "$givenValue Celsius";
+            }
+        }
+        //Kelvin to fahrenheit and celsius
+        if ($firstTempType=='kelvin') 
         {
-            echo "$givenValue Fahrenheit";
+            if ($secondTempType=='fahrenheit')
+            {
+                $fahrenheit=k2f($givenValue);
+                echo "$givenValue Kelvin  = $fahrenheit Fahrenheit";
+            }  elseif ($secondTempType=='celsius') 
+            {
+                $celsius=k2c($givenValue);
+                echo "$givenValue Kelvin = $celsius Celsius";
+            }  else 
+            {
+                echo "$givenValue Kelvin";
+            }
         }
     }
-    //Celsius to fahrenheit and kelvin
-    if ($firstTempType=='celsius') 
-    {
-        if ($secondTempType=='fahrenheit') 
-        {
-            $fahrenheit=c2f($givenValue);
-	        echo "$givenValue Celsius = $fahrenheit Fahrenheit";
-        }  elseif ($secondTempType=='kelvin') 
-        {
-            $kelvin=c2k($givenValue);
-            echo "$givenValue Celsius = $kelvin Kelvin";
-        }  else 
-        {
-            echo "$givenValue Celsius";
-        }
-    }
-    //Kelvin to fahrenheit and celsius
-    if ($firstTempType=='kelvin') 
-    {
-        if ($secondTempType=='fahrenheit')
-        {
-            $fahrenheit=k2f($givenValue);
-            echo "$givenValue Kelvin  = $fahrenheit Fahrenheit";
-        }  elseif ($secondTempType=='celsius') 
-        {
-            $celsius=k2c($givenValue);
-            echo "$givenValue Kelvin = $celsius Celsius";
-        }  else 
-        {
-            echo "$givenValue Kelvin";
-        }
-    } 
+    else //print an error message if input is blank or not a number
+		  echo "<span>*Please Enter a Valid Temperature.</span>";
 }
 				?>
 			</td>

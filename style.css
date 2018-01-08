@@ -1,0 +1,46 @@
+body {
+    background-color: #57a9d9;
+}
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+th {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+td {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+form {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: red;
+}
+.wrapper {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    padding: 15px 15px;
+}
+select {
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+}
+input {
+    margin-bottom: 10px;
+}
+/* Medium Screen Dimensions */
+@media (max-width: 768px) {
+
+}
+/* Small Screen Dimensions */
+@media (max-width: 480px) {
+
+}

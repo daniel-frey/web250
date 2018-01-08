@@ -1,5 +1,5 @@
 # ITC250
-This will be the repo for our web250 projects
+This will be the repo for our ITC250 projects
 
 Application roles / outline doc
 

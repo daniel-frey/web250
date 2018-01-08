@@ -1,4 +1,4 @@
-# web250
+# ITC250
 This will be the repo for our web250 projects
 
 Application roles / outline doc

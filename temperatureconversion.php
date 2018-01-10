@@ -137,7 +137,8 @@ if(isset($_POST['button'])) {
                 echo "$givenValue Kelvin = $celsius Celsius";
             }  else 
             {
-                echo "$givenValue Kelvin";
+                $decimalValue = number_format($givenValue, 2);
+                echo "$givenValue = $decimalValue Kelvin";
             }
         }
     }

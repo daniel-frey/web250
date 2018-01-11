@@ -47,44 +47,41 @@ function k2c($givenValue)
     </head>
 <body>
     <div class ="wrapper">
-        <h2>Temperature Conversion</h2> 
-	   <form action="" method="post">
-	<table>
-		<tr>
-			<td>
-				<select name="firstTempType">
-					<option value="fahrenheit">Fahrenheit</option>
-					<option value="celsius">Celsius</option>
-					<option value="kelvin"> Kelvin</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input type="text" name="givenValue">
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<select name="secondTempType">
-					<option value="fahrenheit">Fahrenheit</option>
-					<option value="celsius">Celsius</option>
-					<option value="kelvin">Kelvin</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input type="submit" name="button" value="Click to Convert">
-			</td>
-		</tr>
-		<tr>
-			<td>
+        <h2>Temperature Conversion</h2>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <select name="firstTempType">
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin"> Kelvin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="givenValue">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="secondTempType">
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="button" value="Click to Convert">
+                    </td>
+                </tr>
+                    <td>
 <?php
 if(isset($_POST['button'])) {
     
-
-          
         $firstTempType=$_POST['firstTempType'];
         $secondTempType=$_POST['secondTempType'];
         $givenValue=$_POST['givenValue'];
@@ -146,10 +143,10 @@ if(isset($_POST['button'])) {
 		  echo "<span>*Please Enter a Valid Temperature.</span>";
 }
 				?>
-			</td>
-		</tr>
-	</table>
-    </div>
-    </form>
-</body>
+                </td>
+                </tr>
+            </table>
+            </div>
+        </form> 
+    </body>
 </html>

@@ -11,5 +11,5 @@ https://docs.google.com/spreadsheets/d/1P7ILd0hwqRAIt3JS02jpN3dAkkQ3YtlYDy9n1UeI
 
 IPO Chart
 
-https://drive.google.com/open?id=1CsHOuWUZtfO1MkKxIoRyT0kd-Ws1yncq
+https://drive.google.com/open?id=1sya-UsyjfmFaOpHK531funBjATd-fa04
 
